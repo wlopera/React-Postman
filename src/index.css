@@ -30,3 +30,8 @@ code {
     height: 600px;
     align-items: center;
 }
+
+.classLabel {
+    width: 35%;
+    text-align: right;
+}

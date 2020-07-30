@@ -5,6 +5,10 @@ class ApiService {
       "Basic " + Buffer.from(authorization.username + ":" + authorization.password).toString("base64")
     );
 
+    if (null !== http.request && http.request.length == 0) {
+      http.request = null;
+    }
+
     return fetch(http.url, { method: http.method, headers: headers, body: http.request })
       .then((result) => {
         return result;
